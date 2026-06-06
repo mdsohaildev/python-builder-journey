@@ -1,82 +1,92 @@
-# Weather App using Python
+# 🌦 Weather App using Python & Streamlit
 
-A simple Python weather application that fetches real-time weather information for any city using APIs.
+A simple weather application built using Python and Streamlit that fetches real-time weather information for any city using APIs.
 
 ## Features
 
-* Get weather by city name
+* Get weather details by city name
 * Displays:
 
   * Temperature
   * Humidity
   * Weather condition
-  
 * Handles invalid city names
-* Uses real-time API data
+* Handles API/network errors
+* Real-time weather data
+* Simple and clean Streamlit UI
 
 ## Technologies Used
 
 * Python
+* Streamlit
 * Requests Library
 * Open-Meteo Geocoding API
 * OpenWeatherMap API
 
 ## Installation
 
-1. Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/your-username/weather-app.git
 ```
 
-2. Navigate into the project folder
+### 2. Navigate into the project folder
 
 ```bash
 cd weather-app
 ```
 
-3. Install dependencies
+### 3. Install dependencies
 
 ```bash
-pip install requests
+pip install streamlit requests
 ```
 
 ## Setup
 
-Replace your API key in the code:
+Replace your API key in `weather_api.py`
 
 ```python
-WEATHER_API_KEY = "YOUR_API_KEY"
+WEATHER_API_key='YOUR_API_KEY'
 ```
 
-You can get a free API key from OpenWeatherMap.
+Get your free API key from OpenWeatherMap.
 
 ## Run the Project
 
 ```bash
-python weather.py
+streamlit run app.py
+```
+
+## Project Structure
+
+```text
+weather-app/
+│
+├── app.py
+├── weather_api.py
+├── README.md
 ```
 
 ## Example Output
 
 ```text
-Enter City Name: Warangal
-
--------- WEATHER REPORT --------
-CITY         : Warangal
-TEMPERATURE  : 31 Celsius
-HUMIDITY     : 70 %
-CONDITION    : Clouds
+City: Warangal
+Temperature: 31 °C
+Humidity: 70 %
+Condition: Clouds
 ```
 
 ## Future Improvements
 
 * Add weather icons
-* Add 5-day forecast
-* Build GUI using Tkinter
-* Create web version using Flask
-* Add error handling for internet issues
+* Add 5-day weather forecast
+* Add dark mode UI
+* Show wind speed and pressure
+* Deploy publicly using Streamlit Cloud
 
 ## Author
 
 Sohail Mohammed
+
